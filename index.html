@@ -1,14 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>asrus.app</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>asrus.app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a26;
+    --bg-elevated: #232333;
+    --accent: #a78bfa;
+    --accent-hot: #f472b6;
+    --accent-cool: #60a5fa;
+    --accent-tft: #fbbf24;
+    --text-primary: #f5f5fa;
+    --text-secondary: #9999b3;
+    --text-muted: #5c5c75;
+    --border: #2a2a3a;
+    --border-light: #3a3a4f;
+  }
+
+  html, body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.13), transparent 42%),
+      radial-gradient(circle at 85% 85%, rgba(244, 114, 182, 0.09), transparent 42%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .logo-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hot));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 8px 28px rgba(167, 139, 250, 0.4);
+    flex-shrink: 0;
+  }
+
+  .logo-text h1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .logo-text .tagline {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 4px;
+    height: 14px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-hot));
+    border-radius: 2px;
+  }
+
+  /* CARDS */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.22s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    font-size: 22px;
+    color: var(--text-muted);
+    transition: all 0.22s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+  }
+
+  .card:hover::after {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+  }
+
+  .card-icon.music {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hot));
+    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.35);
+  }
+
+  .card-icon.rank {
+    background: linear-gradient(135deg, var(--accent-tft), #fb923c);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.35);
+  }
+
+  .card-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .card-arrow {
+    font-size: 22px;
+    color: var(--text-muted);
+    transition: all 0.22s ease;
+    flex-shrink: 0;
+  }
+
+  .card:hover .card-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: auto;
+    padding-top: 48px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .footer .dot {
+    color: var(--accent);
+    margin: 0 8px;
+  }
+
+  @media (max-width: 560px) {
+    .wrapper { padding: 40px 18px; }
+    .header { margin-bottom: 36px; }
+    .logo-text h1 { font-size: 24px; }
+    .card { padding: 18px; gap: 14px; }
+    .card-icon { width: 50px; height: 50px; font-size: 24px; }
+    .card-title { font-size: 16px; }
+  }
+</style>
 </head>
 <body>
-  <h1>asrus.app</h1>
-  <ul>
-    <li><a href="/song-request-queue">Song Request Queue</a></li>
-    <li><a href="/rank-lol-tft">Rank LoL/TFT</a></li>
-  </ul>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-icon">⚡</div>
+    <div class="logo-text">
+      <h1>Asrus</h1>
+      <div class="tagline">Streaming Tools &amp; Utilities</div>
+    </div>
+  </header>
+
+  <!-- CARDS -->
+  <div class="section-label">Aplicações</div>
+  <div class="cards">
+
+    <a class="card" href="/song-request-queue">
+      <div class="card-icon music">🎵</div>
+      <div class="card-content">
+        <div class="card-title">Song Request Queue</div>
+        <div class="card-desc">Fila de pedidos de músicas para a sua live, integrada ao chat.</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="/rank-lol-tft">
+      <div class="card-icon rank">🏆</div>
+      <div class="card-content">
+        <div class="card-title">Rank LoL / TFT</div>
+        <div class="card-desc">Sistema de UUID persistente e comandos customizados de elo para League of Legends e Teamfight Tactics.</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    asrus.app <span class="dot">•</span> feito para streamers
+  </footer>
+
+</div>
 </body>
 </html>
