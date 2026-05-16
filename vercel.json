@@ -6,7 +6,7 @@
     },
     {
       "source": "/rank-lol-tft/:path*",
-      "destination": "https://rank-lol-tft.vercel.app/:path*"
+      "destination": "https://lol-tft-rank.vercel.app/:path*"
     }
   ]
 }
