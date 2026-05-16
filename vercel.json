@@ -19,6 +19,14 @@
     {
       "source": "/rank-lol-tft/:path*",
       "destination": "https://lol-tft-rank.vercel.app/:path*"
+    },
+    {
+      "source": "/portifolio",
+      "destination": "https://portifolio-asrus.vercel.app/"
+    },
+    {
+      "source": "/portifolio/:path*",
+      "destination": "portifolio-kappa-one-90.vercel.app/:path*"
     }
   ]
 }
