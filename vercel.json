@@ -5,6 +5,10 @@
       "destination": "https://lol-tft-rank-production.up.railway.app/api/:path*"
     },
     {
+      "source": "/cmd/:path*",
+      "destination": "https://lol-tft-rank-production.up.railway.app/cmd/:path*"
+    },
+    {
       "source": "/song-request-queue/callback.html",
       "destination": "https://song-request-queue.vercel.app/callback.html"
     },
