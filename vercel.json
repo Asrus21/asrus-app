@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/song-request-queue/callback.html",
+      "destination": "https://song-request-queue.vercel.app/callback.html"
+    },
+    {
       "source": "/song-request-queue/:path*",
       "destination": "https://song-request-queue.vercel.app/:path*"
     },
