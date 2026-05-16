@@ -22,11 +22,19 @@
     },
     {
       "source": "/portifolio",
-      "destination": "https://portifolio-asrus.vercel.app/"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/"
     },
     {
       "source": "/portifolio/:path*",
-      "destination": "portifolio-kappa-one-90.vercel.app/:path*"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
+    },
+    {
+      "source": "/Portifolio",
+      "destination": "https://portifolio-kappa-one-90.vercel.app/"
+    },
+    {
+      "source": "/Portifolio/:path*",
+      "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
     }
   ]
 }
