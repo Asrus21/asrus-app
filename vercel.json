@@ -10,11 +10,11 @@
     },
     {
       "source": "/song-request-queue/callback.html",
-      "destination": "https://song-request-queue.vercel.app/callback.html"
+      "destination": "https://www.asrus.app/song-request-queue/callback.html"
     },
     {
       "source": "/song-request-queue/:path*",
-      "destination": "https://song-request-queue.vercel.app/:path*"
+      "destination": "https://www.asrus.app/song-request-queue/:path*"
     },
     {
       "source": "/rank-lol-tft/:path*",
