@@ -10,11 +10,11 @@
     },
     {
       "source": "/song-request-queue/callback.html",
-      "destination": "https://www.asrus.app/song-request-queue/callback.html"
+      "destination": "https://song-request-queue.vercel.app/callback.html"
     },
     {
       "source": "/song-request-queue/:path*",
-      "destination": "https://www.asrus.app/song-request-queue/:path*"
+      "destination": "https://song-request-queue.vercel.app/:path*"
     },
     {
       "source": "/rank-lol-tft/:path*",
@@ -35,6 +35,10 @@
     {
       "source": "/Portifolio/:path*",
       "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
+    },
+    {
+      "source": "/spotify/:path*",
+      "destination": "https://asrus.up.railway.app/:path*"
     }
   ]
 }
