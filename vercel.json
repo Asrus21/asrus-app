@@ -32,5 +32,32 @@
       "source": "/portifolio/:path*",
       "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/Portifolio",
+      "destination": "/portifolio",
+      "permanent": true
+    },
+    {
+      "source": "/Portifolio/",
+      "destination": "/portifolio/",
+      "permanent": true
+    },
+    {
+      "source": "/Portifolio/:path*",
+      "destination": "/portifolio/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/PORTIFOLIO",
+      "destination": "/portifolio",
+      "permanent": true
+    },
+    {
+      "source": "/PORTIFOLIO/:path*",
+      "destination": "/portifolio/:path*",
+      "permanent": true
+    }
   ]
 }
