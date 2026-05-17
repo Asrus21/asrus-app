@@ -22,11 +22,11 @@
     },
     {
       "source": "/portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/"
     },
     {
       "source": "/portifolio/",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/"
     },
     {
       "source": "/portifolio/:path*",
