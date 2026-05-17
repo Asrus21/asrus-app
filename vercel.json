@@ -22,7 +22,11 @@
     },
     {
       "source": "/portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
+    },
+    {
+      "source": "/portifolio/",
+      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
     },
     {
       "source": "/portifolio/:path*",
@@ -30,15 +34,15 @@
     },
     {
       "source": "/Portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/"
+      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
+    },
+    {
+      "source": "/Portifolio/",
+      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
     },
     {
       "source": "/Portifolio/:path*",
       "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
-    },
-    {
-      "source": "/spotify/:path*",
-      "destination": "https://asrus.up.railway.app/:path*"
     }
   ]
 }
