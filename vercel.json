@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/Portifolio/",
+      "destination": "/Portifolio",
+      "permanent": false
+    },
+    {
+      "source": "/portifolio/",
+      "destination": "/Portifolio",
+      "permanent": false
+    },
+    {
+      "source": "/portifolio",
+      "destination": "/Portifolio",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
@@ -21,23 +38,7 @@
       "destination": "https://lol-tft-rank.vercel.app/:path*"
     },
     {
-      "source": "/portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
-    },
-    {
-      "source": "/portifolio/",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
-    },
-    {
-      "source": "/portifolio/:path*",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
-    },
-    {
       "source": "/Portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
-    },
-    {
-      "source": "/Portifolio/",
       "destination": "https://portifolio-kappa-one-90.vercel.app/index.html"
     },
     {
