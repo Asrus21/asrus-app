@@ -21,6 +21,10 @@
       "destination": "https://lol-tft-rank.vercel.app/:path*"
     },
     {
+      "source": "/spotify/:path*",
+      "destination": "https://asrus.up.railway.app/:path*"
+    },
+    {
       "source": "/portifolio",
       "destination": "https://portifolio-kappa-one-90.vercel.app/"
     },
