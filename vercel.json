@@ -13,12 +13,24 @@
       "destination": "https://song-request-queue.vercel.app/callback.html"
     },
     {
+      "source": "/song-request-queue",
+      "destination": "https://song-request-queue.vercel.app/"
+    },
+    {
       "source": "/song-request-queue/:path*",
       "destination": "https://song-request-queue.vercel.app/:path*"
     },
     {
-      "source": "/rank-lol-tft/:path*",
+      "source": "/rank-lol",
+      "destination": "https://lol-tft-rank.vercel.app/"
+    },
+    {
+      "source": "/rank-lol/:path*",
       "destination": "https://lol-tft-rank.vercel.app/:path*"
+    },
+    {
+      "source": "/spotify",
+      "destination": "https://asrus.up.railway.app/"
     },
     {
       "source": "/spotify/:path*",
