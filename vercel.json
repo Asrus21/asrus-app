@@ -17,51 +17,8 @@
       "destination": "https://song-request-queue.vercel.app/:path*"
     },
     {
-      "source": "/rank-lol-tft/:path*",
+      "source": "/rank-lol/:path*",
       "destination": "https://lol-tft-rank.vercel.app/:path*"
-    },
-    {
-      "source": "/spotify/:path*",
-      "destination": "https://asrus.up.railway.app/:path*"
-    },
-    {
-      "source": "/portifolio",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/"
-    },
-    {
-      "source": "/portifolio/",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/"
-    },
-    {
-      "source": "/portifolio/:path*",
-      "destination": "https://portifolio-kappa-one-90.vercel.app/:path*"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/Portifolio",
-      "destination": "/portifolio",
-      "permanent": true
-    },
-    {
-      "source": "/Portifolio/",
-      "destination": "/portifolio/",
-      "permanent": true
-    },
-    {
-      "source": "/Portifolio/:path*",
-      "destination": "/portifolio/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/PORTIFOLIO",
-      "destination": "/portifolio",
-      "permanent": true
-    },
-    {
-      "source": "/PORTIFOLIO/:path*",
-      "destination": "/portifolio/:path*",
-      "permanent": true
     }
   ]
 }
