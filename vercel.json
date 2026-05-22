@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/api/tft/:path*",
+      "destination": "https://rank-tft-production.up.railway.app/api/tft/:path*"
+    },
+    {
+      "source": "/cmd/tft/:path*",
+      "destination": "https://rank-tft-production.up.railway.app/cmd/tft/:path*"
+    },
+    {
       "source": "/api/:path*",
       "destination": "https://lol-tft-rank-production.up.railway.app/api/:path*"
     },
