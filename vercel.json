@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/twitch/ranking/coeiha",
+      "destination": "https://twitch-ranking-coeiha.vercel.app/twitch/ranking/coeiha"
+    },
+    {
+      "source": "/twitch/ranking/coeiha/:path*",
+      "destination": "https://twitch-ranking-coeiha.vercel.app/twitch/ranking/coeiha/:path*"
+    },
+    {
+      "source": "/api/coeiha/:path*",
+      "destination": "https://twitch-ranking-coeiha.vercel.app/api/coeiha/:path*"
+    },
+    {
       "source": "/api/tft/:path*",
       "destination": "https://rank-tft-production.up.railway.app/api/tft/:path*"
     },
