@@ -13,6 +13,10 @@
       "destination": "https://twitch-ranking-coeiha.vercel.app/api/coeiha/:path*"
     },
     {
+      "source": "/_next/:path*",
+      "destination": "https://twitch-ranking-coeiha.vercel.app/_next/:path*"
+    },
+    {
       "source": "/api/tft/:path*",
       "destination": "https://rank-tft-production.up.railway.app/api/tft/:path*"
     },
