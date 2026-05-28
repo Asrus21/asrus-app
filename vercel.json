@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+  "source": "/twitch/ranking/asrus",
+  "destination": "https://twitch-ranking-asrus.vercel.app/twitch/ranking/asrus"
+    },
+    {
+  "source": "/twitch/ranking/asrus/:path*",
+  "destination": "https://twitch-ranking-asrus.vercel.app/twitch/ranking/asrus/:path*"
+    },
+    {
+  "source": "/api/asrus/:path*",
+  "destination": "https://twitch-ranking-asrus.vercel.app/api/asrus/:path*"
+    },
+    {
       "source": "/twitch/ranking/coeiha",
       "destination": "https://twitch-ranking-coeiha.vercel.app/twitch/ranking/coeiha"
     },
